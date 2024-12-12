@@ -13,7 +13,8 @@
         <link href-"{% static 'app/css/style.css' %}" rel="stylesheet" />
         <link href-"{% static 'app/css/owl.carousel.min.css' %}" rel="stylesheet" />
         <link href-"{% static 'app/css/all.min.css' %}" rel="stylesheet" />
-
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'app/css/main.css' %}">
         <!-- js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -27,7 +28,8 @@
         <title>Web đặt lịch khám nha khoa </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <Link rel="stylesheet" href="main.css">
+
     </head>
     <body>
         <!--Header-->
@@ -63,10 +65,10 @@
                       Bảng giá
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Niềng răng thẩm mỹ</a></li>
-                      <li><a class="dropdown-item" href="#">Niềng răng trong suốt</a></li>
-                      <li><a class="dropdown-item" href="#">Nhổ răng khôn</a></li>
-                      <li><a class="dropdown-item" href="#">Bọc răng sứ</a></li>
+                      <li><a class="dropdown-item" href="#">Bảng giá niềng răng thẩm mỹ</a></li>
+                      <li><a class="dropdown-item" href="#">Bảng giá niềng răng trong suốt</a></li>
+                      <li><a class="dropdown-item" href="#">Bảng giá nhổ răng khôn</a></li>
+                      <li><a class="dropdown-item" href="#">Bảng giá bọc răng sứ</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -76,15 +78,15 @@
                     <a class="nav-link" href="#">Liên hệ</a>
                   </li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" role="Tìm Kiếm">
+                  <input class="form-control me-2" type="Tìm Kiếm" placeholder="Tìm Kiếm" aria-label="Tìm Kiếm">
+                  <button class="btn btn-outline-success" type="submit">Tìm Kiếm</button>
                 </form>
               </div>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    User1
+                    Tài Khoản
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Trang cá nhân </a></li>
@@ -103,7 +105,7 @@
                 </li>
               </ul>
             </div>
-          </nav>
+           </nav>
           <!--end header-->
           {% block banner_slider %}
           
