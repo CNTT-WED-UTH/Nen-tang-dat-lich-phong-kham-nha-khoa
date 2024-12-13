@@ -9,21 +9,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src=" {% static 'app/images/1.webp' %} " class="d-block w-100" alt="..." height="630">
+        <img src=" {% static 'app/images/1.webp' %} " class="d-block w-100" alt="..." height="600">
         <div class="carousel-caption d-none d-md-block">
           <h5>hình ảnh minh họa</h5>
           <p>đẹp vcl</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="{% static 'app/images/a.webp' %}" class="d-block w-100" alt="..." height="630" >
+        <img src="{% static 'app/images/a.webp' %}" class="d-block w-100" alt="..." height="600" >
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'app/images/b.webp' %}" class="d-block w-100" alt="..." height="630">
+        <img src="{% static 'app/images/b.webp' %}" class="d-block w-100" alt="..." height="600">
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
@@ -42,50 +42,18 @@
 {% endblock banner_slider %}
 {% block main-content %}
 <div class="row">
-  <div class="col-lg-3">
-   <img class="thumbnail" src="{% static 'app/images/ngrang.webp' %}">
-   <div class="box-element product">
-     <h6><strong>Niềng răng thẩm mỹ</strong></h6>
-     <hr>
+  <div class="col-lg-4">
+    <img class="thumbnail" src="{% static 'app/images/nhorang.webp' %}" >
+    <div class="box-element product">
+      <h6><strong>Ảnh niềng răng</strong><h6>
+      <hr>
 
-     <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-     <a class="btn btn-outline-success" href="#">Xem</a>
-     <h4 style="display: inline-block; float: right"><strong> 200.000VND/gói  </strong></h4>
-   </div>
- </div>
- <div class="col-lg-3">
-   <img class="thumbnail" src="{% static 'https://raw.githubusercontent.com/CNTT-WED-UTH/Nen-tang-dat-lich-phong-kham-nha-khoa-/refs/heads/quynam/web-dat-lich-kham-benh/app/static/app/images/nhorang.webp' %}">
-   <div class="box-element product">
-     <h6><strong>Niềng răng trong suốt </strong></h6>
-     <hr>
-
-     <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-     <a class="btn btn-outline-success" href="#">Xem</a>
-     <h4 style="display: inline-block; float: right"><strong> 500.000VND/gói  </strong></h4>
-   </div>
- </div>
- <div class="col-lg-3">
-   <img class="thumbnail" src="{% static 'app/images/nhorang.webp' %}">
-   <div class="box-element product">
-     <h6><strong>Nhổ răng khôn</strong></h6>
-     <hr>
-
-     <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-     <a class="btn btn-outline-success" href="#">Xem</a>
-     <h4 style="display: inline-block; float: right"><strong> 100.000VND/răng  </strong></h4>
-   </div>
- </div>
- <div class="col-lg-3">
-   <img class="thumbnail" src="{% static 'app/images/rangsu.webp' %}">
-   <div class="box-element product">
-     <h6><strong>Bọc răng sứ</strong></h6>
-     <hr>
-
-     <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-     <a class="btn btn-outline-success" href="#">Xem</a>
-     <h4 style="display: inline-block; float: right"><strong> 800.000VND/gói  </strong></h4>
-   </div>
- </div>
+      <button class="btn btn-outline-secondary add-btn">Thêm vào lịch</button>
+      <a class="btn btn-outline-success" href="#">Xem</a>
+      <h3 class="display: inline-block; float: right"><strong>200.000vnđ</strong></h3>
+      </div>
+  </div>
 </div>
-<br /><br /><br />
+
+<br/> <br/>
 {% endblock main-content%}
