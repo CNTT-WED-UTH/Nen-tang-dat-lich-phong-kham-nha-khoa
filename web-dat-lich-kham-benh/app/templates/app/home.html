@@ -1,7 +1,6 @@
 {% extends 'app/base.html' %}
-{%  load static %}
+{% load static %}
 {% block banner_slider %}
-
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -10,24 +9,18 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src=" {% static 'app/images/1.webp' %} " class="d-block w-100" alt="..." height="700">
-        <div class="carousel-caption d-none d-md-block bg-success text-white">
-          <h5>"Sức khỏe răng miệng là chìa khóa mở ra nụ cười tự tin."</h5>
-          <p></p>
+        <img src="{% static 'app/images/a1.jpg' %}" class="d-block w-100" alt="..." height="415">
+        <div class="carousel-caption d-none d-md-block text-white">
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="{% static 'app/images/a.webp' %}" class="d-block w-100" alt="..." height="700" >
-        <div class="carousel-caption d-none d-md-block bg-success text-white">
-          <h5>"Thăm khám nha khoa định kỳ – bí quyết để giữ hàm răng khỏe mạnh suốt đời."</h5>
-          <p></p>
+        <img src="{% static 'app/images/a2.jpg' %}" class="d-block w-100" alt="..." height="415">
+        <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'app/images/b.webp' %}" class="d-block w-100" alt="..." height="700">
-        <div class="carousel-caption d-none d-md-block bg-success text-white">
-          <h5>"Răng khỏe, nụ cười đẹp – cùng bạn chinh phục mọi thử thách trong cuộc sống."</h5>
-          <p></p>
+        <img src="{% static 'app/images/a3.jpg' %}" class="d-block w-100" alt="..." heigth="350">
+        <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
     </div>
@@ -40,53 +33,19 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <br /><br /><br />
 {% endblock banner_slider %}
 {% block main-content %}
 <div class="row">
-   <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/ngrang.webp' %}">
-    <div class="box-element product">
-      <h6><strong>Niềng răng thẩm mỹ</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-      <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 200.000VND/gói  </strong></h4>
-    </div>
-  </div>
   <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/rangtrong.webp' %}">
-    <div class="box-element product">
-      <h6><strong>Niềng răng trong suốt </strong></h6>
-      <hr>
-
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-      <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 500.000VND/gói  </strong></h4>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/nhorang.webp' %}">
-    <div class="box-element product">
-      <h6><strong>Nhổ răng khôn</strong></h6>
-      <hr>
-
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-      <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 100.000VND/răng  </strong></h4>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/rangsu.webp' %}">
+    <img class="thumbnail" src="{% static 'app/images/a.jpg' %}">
     <div class="box-element product">
       <h6><strong>Bọc răng sứ</strong></h6>
       <hr>
-
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
+      <button class="btn btn-outline-secondary add-btn">Thêm vào giỏ hàng</button>
       <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 800.000VND/gói  </strong></h4>
+      <h4 style="display: inline-block; float: right"><strong>200.000VNĐ</strong></h4>
     </div>
   </div>
 </div>
-<br /><br /><br />
-{% endblock main-content%} 
+
+{% endblock main-content %}
