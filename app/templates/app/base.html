@@ -14,6 +14,7 @@
         <link href-"{% static 'app/css/owl.carousel.min.css' %}" rel="stylesheet" />
         <link href-"{% static 'app/css/all.min.css' %}" rel="stylesheet" />
         
+        
         <link rel="stylesheet" type="text/css" href="{% static 'app/css/main.css' %}">
         <!-- js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -29,13 +30,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <Link rel="stylesheet" href="main.css">
-
+          <link rel="stylesheet" href="footer.css">
     </head>
     <body>
         <!--Header-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="{% url 'home' %}">
                 <img src=" {% static 'app/images/logo.webp ' %} " width="80" height="80" />
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +45,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Trang chủ</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -95,7 +96,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Khách hàng</a>
+                  <a class="nav-link" href="{% url 'cart' %}">Thanh toán</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Đăng nhập</a>
@@ -106,16 +107,69 @@
               </ul>
             </div>
            </nav>
-          <!--end header-->
+      <!--end header-->
           {% block banner_slider %}
           
           {% endblock banner_slider %}
           <!--main body-->
           {% block main-content %} {% endblock main-content  %}
+          <!--giao dien cart-->
           {% block cart_content %}{% endblock cart_content %}
+          {% block content_checkout %}{% endblock content_checkout %}
           <!--footer-->
-          <footer class="container-fluid bg-success text-center fixed-bottom p-2 nt-5">
-            copyright 2025
+          <footer class="container-fluid bg-success text-white p-3">
+            <div class="footer d-flex justify-content-around">
+              
+              <!-- Left Column -->
+              <div class="text-left">
+                <p>Trả góp 0% - Thanh toán linh hoạt</p>
+                <p>Hợp tác chiến lược</p>
+                <p>Bảo hiểm liên kết</p>
+                <p>Hệ thống phòng khám</p>
+                <p>Tuyển dụng</p>
+              </div>
+              
+              <!-- Center Column -->
+              <div class="text-left">
+                <p>Nhà máy răng sứ</p>
+                <p>Tiêu chuẩn chất lượng</p>
+                <p>Niềng răng thẩm mỹ</p>
+                <p>Trồng răng Implant</p>
+                <p>Răng sứ thẩm mỹ</p>
+              </div>
+          
+              <div>
+                <p>Kết nối với chúng tôi</p>
+                <head>
+                  <link
+                      rel="stylesheet"
+                      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+                  />
+              </head>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook fa-2x" style="color: #1877f2;"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube fa-2x" style="color: #ff0000;"></i></a>
+                <a href="#"><i class="fa-brands fa-zalo fa-2x" style="color: #ff0000;"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-2x" style="color: #e4405f;"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok fa-2x" style="color: black;"></i></a>
+              </div>
+              <p>Chính sách bảo mật - Chính sách bảo hành</p>
+            </div>
+            </div>
+            
+            <div class="footer text-center">
+              <p>© 2025 Dự án sinh viên - Thiết kế bởi nhóm Sinh viên UTH. Trường Đại học Giao Thông Vận Tải HCM.<br>
+                Mọi ý kiến đóng góp vui lòng liên hệ qua email hoặc các kênh truyền thông của nhóm. Xin chân thành cảm ơn!
+                
+                
+                </p>
+          </div>
+         
+          
+          
+          
+          </footer>
+          
           </footer>
     </body>
 </html>
