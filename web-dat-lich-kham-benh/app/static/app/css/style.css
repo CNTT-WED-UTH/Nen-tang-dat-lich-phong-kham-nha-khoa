@@ -84,4 +84,17 @@
    .goodnesssec a{
        text-decoration: none;
    }
-   
+   footer {
+    background-color: #00274d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
