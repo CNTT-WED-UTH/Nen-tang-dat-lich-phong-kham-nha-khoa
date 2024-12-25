@@ -1,36 +1,34 @@
 {% extends 'app/base.html' %}
 {%  load static %}
 {% block banner_slider %}
-
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src=" {% static 'app/images/1.webp' %} " class="d-block w-100" alt="..." height="500">
-        <div class="carousel-caption d-none d-md-block bg-success text-white">
-          <h5>"Sức khỏe răng miệng là chìa khóa mở ra nụ cười tự tin."</h5>
-          <p></p>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{% static 'app/images/1.webp' %}" class="d-block w-100" alt="..." style="height: 600px; object-fit: cover;">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="{% static 'app/images/a.webp' %}" class="d-block w-100" alt="..." style="height: 600px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'app/images/b.webp' %}" class="d-block w-100" alt="..." style="height: 600px; object-fit: cover;">
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="{% static 'app/images/a.webp' %}" class="d-block w-100" alt="..." height="500" >
-        <div class="carousel-caption d-none d-md-block bg-success text-white">
-          <h5>"Thăm khám nha khoa định kỳ – bí quyết để giữ hàm răng khỏe mạnh suốt đời."</h5>
-          <p></p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'app/images/b.webp' %}" class="d-block w-100" alt="..." height="500">
-        <div class="carousel-caption d-none d-md-block bg-success text-white">
-          <h5>"Răng khỏe, nụ cười đẹp – cùng bạn chinh phục mọi thử thách trong cuộc sống."</h5>
-          <p></p>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+    
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -40,54 +38,154 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <br /><br /><br />
+  <script>
+    // Lấy phần tử carousel
+    var myCarousel = document.querySelector('#carouselExample');
+
+    // Khởi tạo carousel
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 50000, // Thời gian giữa các ảnh (ms)
+      ride: 'carousel' // Tự động chạy carousel khi tải trang
+    });
+  </script>
 {% endblock banner_slider %}
 {% block main-content %}
-<div class="row">
-   <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/ngrang.webp' %}">
-    <div class="box-element product">
-      <h6><strong>Niềng răng thẩm mỹ</strong></h6>
-      <hr>
 
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-      <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 200.000VND/gói  </strong></h4>
+<main class="container mx-auto mt-8">
+  <section class="flex flex-col md:flex-row items-center">
+   <div class="md:w-1/2 text-center md:text-left">
+    <h2 class="text-3xl font-bold" style="color:rgb(0, 74, 171);">
+      VỀ NHA KHOA 
+  </h2>
+    <p class="text-gray-700 mt-4">
+     Là chuỗi Phòng khám Nha khoa uy tín Việt Nam với đội ngũ Bác sĩ điều trị giỏi; Chăm sóc khách tận tâm và Kết quả nụ cười đẹp. Nha Khoa Kim với 235 Bác sĩ, 251 Phụ tá tại 33 Phòng khám phủ khắp TpHCM, Hà Nội, Biên Hoà, Bình Dương, Vũng Tàu, Tiền Giang, sẵn sàng phục vụ khách hàng nhanh chóng, thuận tiện.
+    </p>
+    <ul class="text-left mt-4 mx-auto max-w-2xl">
+     <li class="text-red-600">
+      <i class="fas fa-check-circle">
+      </i>
+      Được Quỹ Temasek thuộc sở hữu Chính phủ Singapore đầu tư.
+     </li>
+     <li class="text-red-600">
+      <i class="fas fa-check-circle">
+      </i>
+      Đối tác toàn cầu của đại học Harvard.
+     </li>
+     <li class="text-red-600">
+      <i class="fas fa-check-circle">
+      </i>
+      100% đội ngũ Bác sĩ có chứng chỉ hành nghề.
+     </li>
+     <li class="text-red-600">
+      <i class="fas fa-check-circle">
+      </i>
+      Phòng tiệt khuẩn một chiều tuân thủ quy định của Sở Y tế.
+     </li>
+     <li class="text-red-600">
+      <i class="fas fa-check-circle">
+      </i>
+      4 khác biệt tạo nên uy tín chất lượng của Nha khoa Kim.
+     </li>
+    </ul>
+   </div>
+   <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+    <div class="relative border-green-animated rounded-lg shadow-lg hover-animate">
+     <img alt="Family smiling together" class="rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/XRoQwLLHq3aUHNzUAQJZeHaZX0m0KLWSpTSUwcEjfxTYBS9TA.jpg" width="400"/>
+     <div class="absolute inset-0 flex items-center justify-center">
+      <i class="fas fa-play-circle text-white text-6xl">
+      </i>
+     </div>
     </div>
-  </div>
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/rangtrong.webp' %}">
-    <div class="box-element product">
-      <h6><strong>Niềng răng trong suốt </strong></h6>
-      <hr>
+   </div>
+  </section>
+  <section class="mt-16 text-center">
+    <h2 class="text-3xl font-bold text-gray-800"  style="color:rgb(0, 74, 171);">
+     SỰ KHÁC BIỆT Ở NHA KHOA 
+    </h2>
+    <div class="flex justify-center mt-4">
+     <div class="w-16 h-1 bg-yellow-500">
+     </div>
+    </div>
+ </section>
+ 
+ <section class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="flex justify-center">
+       <div class="border-green-animated rounded-lg shadow-lg hover-animate text-center">
+          <img alt="Dental hygiene poster" class="rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/wyQqgXFncfUBB6hRjhfeiZah1sLOFfoAx2Bm1BO0j1ZFFI1PB.jpg" width="300"/>
+          <p class="mt-2 text-lg font-semibold text-gray-800 uppercase">Chăm Sóc Sức Khỏe Răng Miệng</p>
+       </div>
+    </div>
+    <div class="flex justify-center">
+       <div class="border-green-animated rounded-lg shadow-lg hover-animate text-center">
+          <img alt="Introduction of the management board" class="rounded-lg" height="500" src="{% static 'app/images/co so vat chat.webp' %}" width="500"/>
+          <p class="mt-2 text-lg font-semibold text-gray-800 uppercase">Cơ sở vật chất </p>
+       </div>
+    </div>
+    <div class="flex justify-center">
+       <div class="border-green-animated rounded-lg shadow-lg hover-animate text-center">
+          <img alt="Team of doctors" class="rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/79fI2FpeIvtjj0yCS99JCDPgxFlyEp5PlH4je6MVJeYNFI1PB.jpg" width="300"/>
+          <p class="mt-2 text-lg font-semibold text-gray-800 uppercase">Đội Ngũ Bác Sĩ</p>
+       </div>
+    </div>
+ </section>
+ 
+ </main><style>
+  .hover-animate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thời gian chuyển động */
+  }
 
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-      <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 500.000VND/gói  </strong></h4>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/nhorang.webp' %}">
-    <div class="box-element product">
-      <h6><strong>Nhổ răng khôn</strong></h6>
-      <hr>
+  .hover-animate:hover {
+    transform: scale(1.1); /* Phóng to khi di chuột */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi di chuột */
+  }
 
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-      <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 100.000VND/răng  </strong></h4>
+ 
+</style>
+</head>
+<body class="bg-white">
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-center text-3xl font-bold text-gray-800 mb-4"  style="color:rgb(0, 74, 171);">
+    CẢM NHẬN CỦA KHÁCH HÀNG</h2>
+    <div class="flex justify-center mb-8">
+      <div class="h-1 w-16 bg-yellow-500"></div>
     </div>
-  </div>
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/rangsu.webp' %}">
-    <div class="box-element product">
-      <h6><strong>Bọc răng sứ</strong></h6>
-      <hr>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white shadow-lg rounded-lg p-4 card hover:bg-blue-100">
+        <img alt="Customer 1" class="w-full h-64 object-cover rounded-t-lg" height="300" src="https://placehold.co/300x300" width="300"/>
+        <div class="p-4">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-full mb-4">DỊCH VỤ NIỀNG RĂNG</button>
+          <p class="text-gray-600 mb-2">Con thấy bác sĩ ở đây 5 sao. Con không hề sợ mỗi lần đến nha khoa</p>
+          <p class="text-gray-800 font-bold">Khách hàng Bé Gia Phúc</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-4 card hover:bg-blue-100">
+        <img alt="Customer 2" class="w-full h-64 object-cover rounded-t-lg" height="300" src="https://placehold.co/300x300" width="300"/>
+        <div class="p-4">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-full mb-4">DỊCH VỤ NIỀNG RĂNG</button>
+          <p class="text-gray-600 mb-2">Mình rất ấn tượng với sự quan tâm tận tình của bác sĩ, lộ trình niềng răng rõ ràng và trang thiết bị ở đây rất hiện đại.</p>
+          <p class="text-gray-800 font-bold">Khách hàng Chị Tú Trinh </p>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-4 card hover:bg-blue-100">
+        <img alt="Bảo tuấn" class="w-full h-64 object-cover rounded-t-lg" height="300" src="{% static 'app/images/tuan.webp'  %}" width="300"/>
+        <div class="p-4">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-full mb-4">DỊCH VỤ IMPLANT</button>
+          <p class="text-gray-600 mb-2">Từ Mỹ về Việt Nam, chú quyết định làm Implant tại Nha Khoa Kim. Bác sĩ rất giỏi, khéo tay.</p>
+          <p class="text-gray-800 font-bold">Khách hàng Anh Bảo Tuấn </p>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg p-4 card hover:bg-blue-100">
+        <img alt="Customer 4" class="w-full h-64 object-cover rounded-t-lg" height="300" src="https://placehold.co/300x300" width="300"/>
+        <div class="p-4">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-full mb-4">DỊCH VỤ RĂNG SỨ</button>
+          <p class="text-gray-600 mb-2">Răng đẹp, nhìn rất tự nhiên, mình rất hài lòng. Mình tự tin và cười nhiều hơn sau khi làm răng sứ.</p>
+          <p class="text-gray-800 font-bold">Khách hàng Thu Thảo</p>
+        </div>
+      </div>
+    </div> 
+    
 
-      <button class="btn btn-outline-secondary add-btn">Đánh giá </button>
-      <a class="btn btn-outline-success" href="#">Xem</a>
-      <h4 style="display: inline-block; float: right"><strong> 800.000VND/gói</strong></h4>
-    </div>
-  </div>
-</div>
-<br /><br /><br />
-{% endblock main-content%} 
+
+
+
+{% endblock main-content%}
