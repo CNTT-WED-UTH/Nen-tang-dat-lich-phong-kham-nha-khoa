@@ -11,3 +11,15 @@ def cart(request):
 def checkout(request):
     context= {}
     return render(request,'app/checkout.html',context)
+def gioithieu(request):
+    context= {}
+    return render(request,'app/gioithieu.html',context)
+def dichvu(request):
+    context= {}
+    return render(request,'app/dichvu.html',context)
+def banggia(request):
+    context= {}
+    return render(request,'app/banggia.html',context)
+def tintuc(request):
+    context= {}
+    return render(request,'app/tintuc.html',context)
