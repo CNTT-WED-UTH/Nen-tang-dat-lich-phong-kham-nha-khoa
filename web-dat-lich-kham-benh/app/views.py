@@ -23,3 +23,7 @@ def banggia(request):
 def tintuc(request):
     context= {}
     return render(request,'app/tintuc.html',context)
+
+def datlich(request):
+    context= {}
+    return render(request,'app/datlich.html',context)

@@ -1,0 +1,73 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content_checkout %}
+     <div class="row">
+		<div class="col-lg-6">
+			<div class="box-element" id="form-wrapper">
+				<form id="form">
+					<div id="user-info">
+						<div class="form-field">
+							<input required class="form-control" type="text" name="Họ và tên" placeholder="Họ và tên..">
+						</div>
+						<div class="form-field">
+							<input required class="form-control" type="text" name="Số điện thoại" placeholder="Số điện thoại..">
+						</div>
+					</div>
+					
+					<div id="shipping-info">
+						<hr>
+						<p>Thông tin địa chỉ khách hàng:</p>
+						<hr>
+						<div class="form-field">
+							<input class="form-control" type="text" name="Địa chỉ" placeholder="Địa chỉ..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="Thành phố" placeholder="Thành phố..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="Tỉnh" placeholder="Tỉnh..">
+						</div>
+					</div>
+
+					<hr>
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Tiếp tục">
+				</form>
+			</div>
+
+			<br>
+			<div class="box-element hidden" id="payment-info">
+				<small>Paypal Options</small>
+			</div>
+			
+		</div>
+
+		<div class="col-lg-6">
+			<div class="box-element">
+				<a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Quay lại giỏ hàng</a>
+				<hr>
+				<h3>Tóm tắt đơn hàng</h3>
+				<hr>
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'app/images/ee.webp' %}"></div>
+					<div style="flex:2"><p>Dịch vụ niềng răng thẩm mỹ</p></div>
+					<div style="flex:1"><p>700.000vnđ</p></div>
+					<div style="flex:1"><p>x11</p></div>
+				</div>
+                <div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'app/images/ee.webp' %}"></div>
+					<div style="flex:2"><p>Dịch vụ niềng răng trong suốt</p></div>
+					<div style="flex:1"><p>500.000vnđ</p></div>
+					<div style="flex:1"><p>x11</p></div>
+				</div>
+                <div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'app/images/ee.webp' %}"></div>
+					<div style="flex:2"><p>Dịch vụ nhổ răng khôn</p></div>
+					<div style="flex:1"><p>800.000vnđ</p></div>
+					<div style="flex:1"><p>x11</p></div>
+				</div>
+				<h5>Số lượng:   3</h5>
+				<h5>Tổng cộng:   2.000.000vnđ</h5>
+			</div>
+		</div>
+	</div>
+{% endblock content_checkout %}

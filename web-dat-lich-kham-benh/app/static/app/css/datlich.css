@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#wrapper {
+    width: 830px;
+    background: #f9f9f9;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+#wrapper h1{
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+}
+
+#wrapper p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#wrapper .header{
+    margin-bottom: 15px;
+}
+
+#wrapper .sex-box label {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#wrapper .sex-box input {
+    margin-right: 5px
+}
+
+#wrapper .sex-box{
+    margin-bottom: 38px;
+}
+
+#wrapper .input-box {
+    margin-bottom: 30px;
+}
+
+#wrapper .input-box input {
+    width: 350px;
+    height: 55px;
+    padding-right: 38px;
+}
+
+#wrapper input[type="text"] {
+    margin-right: 15px;
+}
+
+#wrapper input[type="text"],
+#wrapper input[type="tel"],
+#wrapper textarea {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#wrapper textarea {
+    width: 100%;
+    height: 50px;
+    resize: none;
+}
+
+#wrapper .comment-box {
+    margin-bottom: 34px;
+}
+
+#wrapper .btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+#wrapper .box-button {
+    display: flex;
+    justify-content: center;
+}

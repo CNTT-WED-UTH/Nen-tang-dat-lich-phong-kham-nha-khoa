@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content_dichvu %}
+<a  class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190; Quay lại</a>
+<script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+    <hr class="border-gray-300 my-4">
+    <main class="container mx-auto py-10">
+        <h1 class="text-center text-3xl font-bold text-blue-700 mb-10">DỊCH VỤ</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Bọc răng sứ icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/KPjBTEiIQ3I5OBA1zWbdbf0Gh6fCgFzgwaZYgu0Sye4kvm7nA.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold ">Bọc răng sứ</p> 
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Cấy ghép implant icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/KPjBTEiIQ3I5OBA1zWbdbf0Gh6fCgFzgwaZYgu0Sye4kvm7nA.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold ">Cấy ghép implant</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Niềng răng thẩm mỹ icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/oc65yOhejGVwPC6yFLlC2wUhZ756r6sALFlMxt7jcmQzr5eTA.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold">Niềng răng thẩm mỹ</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Mặt dán sứ Veneer icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/lansItSVhlZoKJf0x3cCfQRjU48hgS3vGHVC6aiuEIfIvm7nA.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold ">Mặt dán sứ Veneer</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Tẩy trắng răng icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/cMKfSmiJ7ExrCCVePsA2swlEc445ndXGM6Meo076sesseaufE.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold">Tẩy trắng răng</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Nhổ răng khôn icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/fdfpF8WiDJptPEgBJfe1okjkMKQG2LuAo3I4ZDfumLbHe1cfJA.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold">Nhổ răng khôn</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Bệnh lý nha chu icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/a5CBHLh0fxVOMqKtZnM5HDNPeuDJInhgeMfsgPZMe2cr9aufE.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold">Bệnh lý nha chu</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Điều trị tủy icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/bfCoLyptqRQ3BiHoIZLedcIEOaXaleWIQzsU76tV2AMTvm7nA.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold">Điều trị tủy</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover-scale border border-gray-300">
+                <img alt="Hàn trám răng icon" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/so79JdhnhKaIGJ4ZtbmH0fHWZn298TLtofno5BMxXLhvXz9TA.jpg" width="200"/>
+                <p class="text-center text-gray-700 font-bold">Hàn trám răng</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+{% endblock content_dichvu %}

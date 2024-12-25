@@ -10,4 +10,5 @@ urlpatterns = [
     path('dichvu/', views.dichvu, name="dichvu"),
     path('banggia/', views.banggia, name="banggia"),
     path('tintuc/', views.tintuc, name="tintuc"),
+    path('datlich/', views.datlich, name="datlich"),
 ]

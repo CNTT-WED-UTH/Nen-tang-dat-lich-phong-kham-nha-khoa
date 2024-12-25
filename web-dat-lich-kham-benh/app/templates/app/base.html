@@ -13,109 +13,256 @@
         <link href-"{% static 'app/css/style.css' %}" rel="stylesheet" />
         <link href-"{% static 'app/css/owl.carousel.min.css' %}" rel="stylesheet" />
         <link href-"{% static 'app/css/all.min.css' %}" rel="stylesheet" />
+        <link href-"{% static 'app/css/datlich.css' %}" rel="stylesheet" />
+      
         
         <link rel="stylesheet" type="text/css" href="{% static 'app/css/main.css' %}">
         <!-- js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
+     
         <script src="{% static 'app/js/s3.js' %}" ></script>
         <script src="{% static 'app/js/all.min.js' %}" ></script>
         <script src="{% static 'app/js/myscript.js' %}" ></script>
-
-
-        <title>Phòng khám nha khoa  </title>
+        
+        <title>Web đặt lịch khám nha khoa </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <Link rel="stylesheet" href="main.css">
-
+          <link rel="stylesheet" href="footer.css">
+        
     </head>
     <body>
         <!--Header-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src=" {% static 'app/images/logo.webp ' %} " width="80" height="80" />
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dịch vụ
+        
+        <nav class="navbar navbar-expand-lg bg-white" style="padding: 0.2rem 0.5rem; height: auto;">
+            <div class="container-fluid bg-white" style="padding: 0; margin: 0; height: auto;">
+                <!-- Logo -->
+                <a class="navbar-brand flex items-center" href="{% url 'home' %}" style="display: flex; align-items: center;">
+                    <img src="{% static 'app/images/logo.webp' %}" width="60" height="60" alt="Logo" style="display: block;"> <!-- Giảm kích thước logo -->
+                    <span class="ml-2 text-lg font-bold" style="line-height: 1; color:rgb(0, 74, 171);">
+                        NHA KHOA
+                    </span>
+                  
+                </a>
+        
+                <!-- Menu -->
+                <div class="flex items-center ml-auto space-x-4"> <!-- Căn chỉnh menu ngang tầm logo -->
+                    <a class="text-gray-700 text-sm font-medium" href=" {% url 'gioithieu' %}">Giới thiệu</a>
+                    
+                    <a class="text-gray-700 text-sm font-medium" href="{% url 'dichvu' %}">Dịch vụ</a>
+                    <a class="text-gray-700 text-sm font-medium" href="{% url 'banggia' %}">Bảng giá</a>
+                    <a class="text-gray-700 text-sm font-medium" href="{% url 'tintuc' %}">Tin tức</a>
+                    <a class="bg-red-600 text-white px-3 py-1 rounded text-sm font-medium flex items-center" href="{% url 'datlich' %}">
+                        <i class="fas fa-calendar-alt mr-2"></i> ĐẶT HẸN
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Niềng răng thẩm mỹ</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Niềng răng trong suốt</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Nhổ răng khôn</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Bọc răng sứ</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Bảng giá
+                    <a class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-medium flex items-center" href="#">
+                        <i class="fas fa-phone-alt mr-2"></i>1900 6899
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Bảng giá niềng răng thẩm mỹ</a></li>
-                      <li><a class="dropdown-item" href="#">Bảng giá niềng răng trong suốt</a></li>
-                      <li><a class="dropdown-item" href="#">Bảng giá nhổ răng khôn</a></li>
-                      <li><a class="dropdown-item" href="#">Bảng giá bọc răng sứ</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Khách hàng</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Liên hệ</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="Tìm Kiếm">
-                  <input class="form-control me-2" type="Tìm Kiếm" placeholder="Tìm Kiếm" aria-label="Tìm Kiếm">
-                  <button class="btn btn-outline-success" type="submit">Tìm Kiếm</button>
-                </form>
-              </div>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Tài Khoản
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Trang cá nhân </a></li>
-                    <li><a class="dropdown-item" href="#">Đặt lịch</a></li>
-                    <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Khách hàng</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Đăng nhập</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Đăng kí</a>
-                </li>
-              </ul>
+                    <a class="border-2 border-yellow-500 text-yellow-500 px-3 py-1 rounded text-sm font-medium" href="{% url 'cart' %}">
+                        Thanh toán
+                    </a>
+                </div>
             </div>
-           </nav>
-          <!--end header-->
-          {% block banner_slider %}
-          
-          {% endblock banner_slider %}
+        </nav>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        
+        <style>
+            /* Đặt nền trắng và thu gọn padding */
+            body, header, .navbar, .container-fluid {
+                background-color: #ffffff;
+            }
+        
+            /* Logo */
+            .navbar-brand img {
+                width: 60px; /* Giảm kích thước logo */
+                height: 60px;
+            }
+        
+            /* Menu ngang tầm logo */
+            .navbar .flex {
+                align-items: center; /* Đảm bảo menu căn ngang với logo */
+            }
+        
+            /* Giảm khoảng cách giữa các liên kết */
+            .navbar a {
+                font-size: 0.875rem; /* Kích thước chữ nhỏ hơn */
+                padding: 0.2rem 0.5rem; /* Giảm padding bên trong liên kết */
+            }
+        
+            /* Tùy chỉnh các nút */
+            .bg-red-600, .bg-blue-600, .border-2 {
+                padding: 0.3rem 0.7rem; /* Giảm kích thước nút */
+            }
+        
+            .bg-blue-600 i {
+                margin-right: 0.2rem; /* Khoảng cách giữa biểu tượng và chữ */
+            }
+        </style>
+        
+      
+      <!--end header-->
+          {% block banner_slider %} {% endblock banner_slider %}
           <!--main body-->
-          {% block main-content %} {% endblock main-content  %}
+          {% block main-content %} 
+        
+          {% endblock main-content  %}
+          
+          <!--giao dien cart-->
+          {% block cart_content %}{% endblock cart_content %}
+          {% block content_gioithieu %}{% endblock content_gioithieu %}
+          {% block content_dichvu %}{% endblock content_dichvu %}
+          {% block content_checkout %}{% endblock content_checkout %}
+          {% block content_banggia %}{% endblock content_banggia %}
+          {% block content_tintuc %}{% endblock content_tintuc %}
+          {% block content_datlich %}{% endblock content_datlich%}
+          <!--footer--> 
+          <style>
+            .card img {
+              transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+            }
+          
+            .card:hover img {
+              transform: scale(1.1); /* Phóng to ảnh khi di chuột */
+              box-shadow: 0 10px 20px rgb(67, 209, 241); /* Thêm bóng đổ cho ảnh */
+            }
+        
+            button {
+              transition: transform 0.3s ease, background-color 0.3s ease; /* Hiệu ứng mượt */
+            }
+          
+            button:hover {
+              transform: translateY(-5px); /* Di chuyển nút lên trên một chút */
+              background-color:rgba(153, 153, 153, 0.36); /* Thay đổi màu nền khi di chuột */
+            }
+          </style>
+          <style>
+            .bg-custom-blue {
+                background-color:rgb(94, 174, 201); /* Chọn màu xanh nhạt theo ý muốn */
+            }
+        </style>
+        <section class="bg-custom-blue text-white py-2 mt-8">
+            <div class="container mx-auto text-center">
+                <h2 class="text-lg font-bold">
+                    NHA KHOA TIÊU CHUẨN CHẤT LƯỢNG
+                </h2>
+            </div>
+        </section>
+        
+           <!-- Certificates Section -->
+           <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slideshow</title>
+        <style>
+          .slideshow-container {
+            max-width: 400px; /* Điều chỉnh kích thước container */
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+          }
+      
+          .slideshow-container img {
+            width: 100%; /* Hình sẽ tự động co dãn theo kích thước container */
+            height: auto; /* Giữ tỷ lệ khung hình */
+            display: none;
+            transition: opacity 1s ease-in-out;
+          }
+      
+          .slideshow-container img.active {
+            display: block;
+            opacity: 1;
+          }
+        </style>
+      </head>
+      <body>
+        <section class="container mx-auto py-8 px-6">
+          <div class="slideshow-container">
+            <img alt="Certificate 1" class="shadow-md active" src="https://storage.googleapis.com/a1aa/image/TIywmdc3v2LUB58HkoeRs2M9HyQ3Jxul4tJ7iEZIyeXsL79TA.jpg" />
+            <img alt="Certificate 2" class="shadow-md" src="https://storage.googleapis.com/a1aa/image/iSCvpl9MV8qaGVpZQmFa2hiWdl1e9FPugWWAfcYDrYYtL79TA.jpg" />
+            <img alt="Certificate 3" class="shadow-md" src="https://storage.googleapis.com/a1aa/image/AJpPdJ6nSp5xHp24JeIYfQEf4oLmGtB9GGoYndHrOm9RX27nA.jpg" />
+            <img alt="Trophy" class="shadow-md" src="https://storage.googleapis.com/a1aa/image/cfTvSiXktY3yBaUPXv4LQC7QpRZJYuDmFzL5GElifgpvL79TA.jpg" />
+          </div>
+        </section>
+      
+        <script>
+         
+          const slides = document.querySelectorAll('.slideshow-container img');
+          let currentSlide = 0;
+      
+          function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+          }
+      
+          // Chạy slideshow mỗi 3 giây
+          setInterval(showNextSlide, 2000);
+        </script>
+      </body>
+      </html>
+      
+          
+          <footer class="container-fluid" style="background-color:rgb(94, 174, 201); color: white; padding: 3rem;">
 
-          <!--footer-->
-          <footer class="container-fluid bg-success text-center fixed-bottom p-2 nt-5">
-            copyright 2024
+            <div class="footer d-flex justify-content-around">
+              
+              <!-- Left Column -->
+             
+              <div class="text-left">
+                <p>Trả góp 0% - Thanh toán linh hoạt</p>
+                <p>Hợp tác chiến lược</p>
+                <p>Bảo hiểm liên kết</p>
+                <p>Hệ thống phòng khám</p>
+                <p>Tuyển dụng</p>
+              </div>
+              
+              <!-- Center Column -->
+              <div class="text-left">
+                <p>Nhà máy răng sứ</p>
+                <p>Tiêu chuẩn chất lượng</p>
+                <p>Niềng răng thẩm mỹ</p>
+                <p>Trồng răng Implant</p>
+                <p>Răng sứ thẩm mỹ</p>
+              </div>
+          
+              <div>
+                <p>Kết nối với chúng tôi</p>
+                <head>
+                  <link
+                      rel="stylesheet"
+                      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+                  />
+              </head>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook fa-2x" style="color: #1877f2;"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube fa-2x" style="color: #ff0000;"></i></a>
+                <a href="#"><i class="fa-brands fa-zalo fa-2x" style="color: #ff0000;"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-2x" style="color: #e4405f;"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok fa-2x" style="color: black;"></i></a>
+              </div>
+              <p>Chính sách bảo mật - Chính sách bảo hành</p>
+            </div>
+            </div>
+            
+            <div class="footer text-center">
+              <p>© 2025 Dự án sinh viên - Thiết kế bởi nhóm Sinh viên UTH. Trường Đại học Giao Thông Vận Tải HCM.<br>
+                Mọi ý kiến đóng góp vui lòng liên hệ qua email hoặc các kênh truyền thông của nhóm. Xin chân thành cảm ơn!
+                
+                
+                </p>
+          </div>
+         
+          
+          
+          
+          </footer>
+          
           </footer>
     </body>
 </html>
