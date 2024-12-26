@@ -45,14 +45,85 @@
                         Giới thiệu
                       </a>
                       <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Về nha khoa</a></li>
-                          <li><a class="dropdown-item" href="#">Đội ngũ bác sĩ</a></li>
-                          <li><a class="dropdown-item" href="#">Những thành tựu</a></li>
-                          <li><a class="dropdown-item" href="#">Nhà máy sản xuất răng sứ</a></li>
-                          <li><a class="dropdown-item" href="#">Tiêu chuẩn chất lượng</a></li>
-                          <li><a class="dropdown-item" href="#">Trải nghiệm khách hàng</a></li>
-                          <li><a class="dropdown-item" href="#">Cơ sở pháp lý</a></li>
-                      </ul>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#VeNhaKhoaModal">Về nha khoa</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#DichVuModal">Dịch vụ</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#DoiNguBacSiModal">Đội ngũ bác sĩ</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#CoSoVatChatModal">Cơ sở vật chất</a></li>
+                    </ul>
+                    <!-- Modal -->
+                    <div class="modal fade" id="VeNhaKhoaModal" tabindex="-1" aria-labelledby="VeNhaKhoaModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="veNhaKhoaModalLabel">Về Nha Khoa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Chào mừng bạn đến với nha khoa, nơi chăm sóc nụ cười và sức khỏe răng miệng toàn diện của bạn! Chúng tôi tự hào là một trong những cơ sở nha khoa uy tín, hiện đại, và chuyên nghiệp, mang đến các dịch vụ tốt nhất trong lĩnh vực chăm sóc răng miệng.
+                                    </p>
+                                    <p>Với sứ mệnh nâng cao sức khỏe răng miệng và đem lại nụ cười tự tin cho mọi khách hàng, chúng tôi không ngừng cải tiến, áp dụng công nghệ hiện đại và quy trình an toàn đạt tiêu chuẩn quốc tế.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="DichVuModal" tabindex="-1" aria-labelledby="DichVuModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="DichVuModalLabel">Dịch vụ</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                    <p>Chúng tôi cung cấp đa dạng các dịch vụ nha khoa, từ cơ bản đến chuyên sâu, bao gồm:</p>
+                                    <ul>
+                                      <li>Nha khoa tổng quát: Cạo vôi, trám răng, điều trị sâu răng, và viêm nướu.</li>
+                                      <li>Nha khoa thẩm mỹ: Tẩy trắng răng, dán sứ Veneer, bọc răng sứ, và niềng răng.</li>
+                                      <li>Cấy ghép Implant: Phục hồi răng mất với công nghệ hiện đại, độ bền cao.</li>
+                                      <li>Chỉnh nha: Giúp điều chỉnh răng lệch lạc, mang lại hàm răng đều đặn, thẩm mỹ.</li>
+                                      <li>Nha khoa trẻ em: Chăm sóc và bảo vệ răng miệng cho trẻ từ sớm.</li>
+                                  </ul>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="DoiNguBacSiModal" tabindex="-1" aria-labelledby="DoiNguBacSiModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="DoiNguBacSiModalLabel">Đội ngũ bác sĩ</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <p>Đội ngũ bác sĩ tại nha khoa đều là những chuyên gia giàu kinh nghiệm, tận tâm, được đào tạo bài bản trong và ngoài nước. Chúng tôi luôn lắng nghe, tư vấn tận tình và đưa ra giải pháp phù hợp nhất với nhu cầu của từng khách hàng.</p>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="CoSoVatChatModal" tabindex="-1" aria-labelledby="CoSoVatChatModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="CoSoVatChatModalLabel">Cơ sở vật chất</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <p>Phòng khám được trang bị thiết bị tiên tiến, đảm bảo vệ sinh an toàn tuyệt đối. Môi trường thân thiện, thoải mái giúp khách hàng cảm thấy yên tâm khi trải nghiệm dịch vụ.</p>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

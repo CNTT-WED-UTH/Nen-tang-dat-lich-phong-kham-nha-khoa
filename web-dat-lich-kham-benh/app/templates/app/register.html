@@ -1,6 +1,6 @@
 {% extends 'app/base.html' %}
 {% load static %}
-{% block title %}Đăng Ký Tài Khoản{% endblock title %}
+{% block title %}{% endblock title %}
 {% block content %}
 <section class="container my-5">
     <h1 class="text-center mb-4">Đăng Ký Tài Khoản</h1>
@@ -39,4 +39,27 @@
         </div>
     </div>
 </section>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url("{% static 'app/images/1.webp' %}") no-repeat center center fixed;
+        background-size: cover;
+    }
+    .container {
+        background-color: transparent; /* Nền trong suốt */
+        padding: 20px;
+        box-shadow: none; /* Loại bỏ bóng */
+    }
+    h1 {
+        color: #333;
+    }
+    .btn-primary {
+        background-color: #4285F4;
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: #357ae8;
+    }
+</style>
 {% endblock content %}
