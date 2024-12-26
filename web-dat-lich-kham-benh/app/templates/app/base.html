@@ -107,12 +107,11 @@
             </div>
            </nav>
           <!--end header-->
-          {% block banner_slider %}
-          
-          {% endblock banner_slider %}
+          {% block banner_slider %} {% endblock banner_slider %}
           <!--main body-->
           {% block main-content %} {% endblock main-content  %}
-
+          {% block title %} {% endblock title %}
+          {% block content %}{% endblock content %}
           <!--footer-->
           <footer class="container-fluid" style="background-color: #ADD8E6; color: white; padding: 3rem;">
             <div class="footer d-flex justify-content-around">
