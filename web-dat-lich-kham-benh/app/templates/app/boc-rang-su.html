@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bọc Răng Sứ Thẩm Mỹ</title>
+    <style>
+        /* Reset hoàn toàn mọi margin và padding mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Loại bỏ khoảng trắng của trang */
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif; /* Đặt font chữ Arial */
+            color: black; /* Đặt màu chữ đen */
+        }
+
+        /* Phần header chứa ảnh nền */
+        header {
+            background-image: url("{% static 'app/images/a2.jpg' %}");
+            background-size: cover; /* Đảm bảo ảnh phủ kín phần đầu */
+            background-position: center; /* Đặt ảnh ở giữa */
+            height: 400px; /* Chiều cao của ảnh nền */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Đặt màu chữ trắng để dễ đọc trên nền tối */
+            position: relative;
+            z-index: 1; /* Đảm bảo ảnh luôn ở dưới phần nội dung */
+        }
+
+        header h1 {
+            font-size: 36px;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Container nội dung chính */
+        .container {
+            width: 100%; /* Chiếm toàn bộ chiều rộng */
+            max-width: 800px; /* Giới hạn chiều rộng tối đa */
+            padding: 20px; /* Thêm padding cho container */
+            background-color: rgba(255, 255, 255, 0.9); /* Nền trắng trong suốt */
+            border-radius: 10px; /* Bo góc container */
+            margin: -50px auto 20px; /* Đặt margin để làm cho container nằm dưới ảnh */
+            position: relative;
+            z-index: 2; /* Đảm bảo nội dung không bị đè lên ảnh */
+        }
+
+        h2 {
+            color: #0056b3;
+            padding: 10px 20px; /* Khoảng cách bên trong các tiêu đề */
+            text-align: left; /* Căn lề trái cho tiêu đề */
+        }
+
+        p, ul {
+            padding: 10px 20px; /* Khoảng cách bên trong nội dung */
+            text-align: left; /* Căn lề trái cho đoạn văn bản và danh sách */
+        }
+
+        ul {
+            list-style-position: inside; /* Đảm bảo dấu chấm của danh sách nằm trong */
+        }
+
+        ol {
+            padding-left: 20px; /* Đặt lề cho danh sách thứ tự */
+        }
+
+        img {
+            width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của container */
+            height: auto; /* Giữ tỷ lệ chiều cao của ảnh */
+            border-radius: 10px; /* Tạo bo tròn các góc ảnh */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Phần đầu trang với ảnh nền -->
+    <header>
+        <h1></h1>
+    </header>
+
+    <!-- Nội dung chính của trang -->
+    <div class="container">
+        <h1>Bọc răng sứ thẩm mỹ đẹp, an toàn và những điều bạn cần biết</h1>
+        <p>Bọc răng sứ thẩm mỹ là kỹ thuật phục hình cố định bằng vật liệu sứ có vai trò phục hồi chức năng ăn nhai, cải thiện thẩm mỹ giúp bạn tự tin với nụ cười rạng rỡ tự nhiên. Những thắc mắc về:</p>
+        <ul>
+            <li>Bọc răng sứ có đau không?</li>
+            <li>Có những loại răng sứ nào?</li>
+            <li>Chi phí bọc răng sứ bao nhiêu?</li>
+        </ul>
+        <p>… sẽ được giải đáp trong bài viết bên dưới.</p>
+        <h2>Bọc răng sứ là gì? Trường hợp nào nên bọc răng sứ?</h2>
+        <p>Bọc răng sứ (phục hình cố định răng sứ) là sử dụng răng sứ được làm hoàn toàn từ sứ hoặc sứ kết hợp cùng kim loại để chụp lên phần răng khiếm khuyết hoặc hư tổn để tái tạo hình dáng, kích thước và màu sắc như răng thật.</p>
+        <p>Có 2 phương pháp răng sứ:</p>
+        <ul>
+            <li><strong>Bọc sứ</strong>: phương pháp sử dụng răng sứ để chụp lên trên răng thật.</li>
+            <li><strong>Dán sứ</strong>: phương pháp sử dụng mặt dán làm bằng lớp răng sứ mỏng nguyên khối có hình dáng và kích thước như răng thật dán lên mặt trước của răng. Phương pháp này phù hợp cho khách hàng có cung răng đều đẹp sẵn.</li>
+        </ul>
+
+        <h2>Bốn ưu điểm của bọc răng sứ thẩm mỹ</h2>
+        <ul>
+            <li><strong>Khắc phục tình trạng thẩm mỹ của răng:</strong> Sau khi bọc răng sứ, răng sẽ đẹp, đều và trắng sáng hoàn hảo.</li>
+            <li><strong>Khôi phục chức năng ăn nhai:</strong> Răng sứ cứng chắc, chịu lực tốt, đảm bảo chức năng ăn nhai.</li>
+            <li><strong>Thời gian bọc răng sứ nhanh:</strong> Chỉ từ 3 – 5 ngày, hoặc nhanh hơn (8 – 36 giờ) với công nghệ hiện đại.</li>
+            <li><strong>Chi phí hợp lý:</strong> Có nhiều loại sản phẩm răng sứ với mức giá đa dạng.</li>
+        </ul>
+
+        <h2>Quy trình bọc răng sứ được thực hiện như thế nào?</h2>
+        <p>Để đạt hiệu quả cao và an toàn, quy trình bọc răng sứ phải được tiến hành đúng chuẩn theo trình tự:</p>
+        <ol>
+            <li>Thăm khám, tư vấn, chụp phim, lên kế hoạch điều trị.</li>
+            <li>Gây tê và mài răng.</li>
+            <li>Lấy dấu mẫu hàm và thiết kế răng sứ bằng công nghệ số.</li>
+            <li>Tiến hành gắn răng tạm.</li>
+            <li>Thử và gắn sứ.</li>
+        </ol>
+
+        <h2>Bọc răng sứ mất bao lâu?</h2>
+        <p>Thời gian bọc răng sứ phụ thuộc vào nhiều yếu tố, nhưng thường mất từ 3 – 5 ngày. Tại Nha Khoa Kim, nhờ ứng dụng công nghệ kỹ thuật số, quá trình này có thể rút ngắn chỉ còn 8 – 36 giờ.</p>
+
+        <h2>Bọc răng sứ có đau không?</h2>
+        <p>Đây là mối quan tâm phổ biến của khách hàng. Với tay nghề bác sĩ cao và trang thiết bị hiện đại tại Nha Khoa Kim, quá trình bọc răng sứ hầu như KHÔNG ĐAU và bảo tồn mô răng tối đa.</p>
+
+        <p>Khám phá quy trình làm răng sứ nhanh chóng và chính xác tại Nha Khoa Kim để sở hữu nụ cười hoàn hảo!</p>
+    </div>
+</body>
+</html>

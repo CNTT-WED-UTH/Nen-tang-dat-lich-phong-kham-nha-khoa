@@ -37,3 +37,7 @@ def register(request):
         messages.success(request, 'Đăng ký thành công!')
         return redirect('login')  # Chuyển hướng đến trang đăng nhập sau khi đăng ký
     return render(request, 'app/register.html')
+def login(request):
+    return render(request, 'app/login.html')
+def boc_rang_su(request):
+    return render(request, 'app/boc-rang-su.html')
